@@ -1,4 +1,4 @@
--package com.uca.capas.service;
+package com.uca.capas.service;
 
 public class SucursalService {
 
