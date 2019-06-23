@@ -24,11 +24,6 @@ public class SpringConfiguration implements WebMvcConfigurer {
 
 	}
 	
-	@Bean
-	public MappingJackson2HttpMessageConverter jsonConverter() {
-		return new MappingJackson2HttpMessageConverter();
-	}
-	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");

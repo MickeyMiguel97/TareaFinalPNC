@@ -7,6 +7,7 @@ package com.uca.capas.configuration;
 
  import org.springframework.context.annotation.Bean;
  import org.springframework.context.annotation.Configuration;
+ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  import org.springframework.jdbc.datasource.DriverManagerDataSource;
  import org.springframework.orm.jpa.JpaTransactionManager;
  import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -16,6 +17,7 @@ package com.uca.capas.configuration;
 
  @Configuration
  @EnableTransactionManagement
+ @EnableJpaRepositories(basePackages = "com.uca.capas.repository")
  public class JpaConfiguration {
 	 
 	 @Bean
@@ -29,7 +31,7 @@ package com.uca.capas.configuration;
 	 em.setJpaVendorAdapter(vendorAdapter);
 	 em.setJpaProperties(hibernateProperties());
 	 return em;
-	 }
+}
 
  @Bean
  JpaTransactionManager transactionManager (EntityManagerFactory entityManagerFactory) {
@@ -53,6 +55,7 @@ package com.uca.capas.configuration;
  Properties properties = new Properties();
  properties.setProperty("hibernate.show_sql", "true");
  properties.setProperty("hibernate.dialect","org.hibernate.dialect.PostgreSQLDialect");
+ properties.setProperty("hibernate.enable_lazy_load_no_trans","true");
  return properties;
 
  }
