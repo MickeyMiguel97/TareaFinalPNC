@@ -47,5 +47,9 @@ public class User {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
+	
+	public User() {
+		super();
+	}
 
 }

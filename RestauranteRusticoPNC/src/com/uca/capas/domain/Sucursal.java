@@ -41,7 +41,7 @@ public class Sucursal {
 	private String horarioout;
 	
 	@OneToMany(mappedBy = "sucursal", fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-	private List<Empleado> empleado;
+	private List<Empleado> empleados;
 	
 	public Sucursal() {
 		super();
@@ -103,12 +103,12 @@ public class Sucursal {
 		this.horarioout = horarioout;
 	}
 
-	public List<Empleado> getEmpleado() {
-		return empleado;
+	public List<Empleado> getEmpleados() {
+		return empleados;
 	}
 
-	public void setEmpleado(List<Empleado> empleado) {
-		this.empleado = empleado;
+	public void setEmpleados(List<Empleado> empleados) {
+		this.empleados = empleados;
 	}
 	
 	
