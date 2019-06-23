@@ -17,24 +17,5 @@ charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 		<form:input type="password" name="clave" path="clave"/><br>
 		<input type="submit" value="Login">
 	</form:form>
-	<script type='text/javascript'>
-	   	$("#login").on('submit', function (e) {
-			e.preventDefault();
-			$.ajax(
-				{
-					url: "${pageContext.request.contextPath}/login",
-					data:  $("#login").serialize(),
-					type: 'POST', 
-					success: function (result) {
-						location.href = "${pageContext.request.contextPath}/sucursales"
-					},
-					error: function (result) {
-						swal("Usuario o contraseña inválido", {
-				 	    	icon: "error",
-		 		   		});
-					}
-				});
-		});
-    </script>
 </body>
 </html>

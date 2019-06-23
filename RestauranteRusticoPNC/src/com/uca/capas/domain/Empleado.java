@@ -31,11 +31,18 @@ public class Empleado {
 	private String genero;
 	 
 	@Column(name = "estado")
-	private int estado;
+	private Boolean estado;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "fk_sucursal")
 	private Sucursal sucursal;
+	
+	public String getEstadoDelegate() {
+		if(this.estado == null) return "";
+		else {
+			return estado == true ? "Activo":"Inactivo";
+		}
+	}
 
 	public Integer getPk_codempleado() {
 		return pk_codempleado;
