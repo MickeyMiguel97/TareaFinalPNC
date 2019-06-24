@@ -9,9 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form  action="${pageContext.request.contextPath}/edits" method="POST" modelAttribute="sucursal">
+<form:form  action="${pageContext.request.contextPath}/agregars" method="POST" modelAttribute="sucursal">
 
-		<form:input type="hidden" name="codigo" path="codigo"/>
+		<form:input type="hidden" name="pk_codsucursal" path="pk_codsucursal"/>
 		
 		<label>Nombre: </label>
 		<form:input type="text" name="nombre" path="nombre"/><br>
@@ -31,7 +31,7 @@
 		<label>Cerrado a las: </label>
 		<form:input type="text" name="horarioout" path="horarioout"/><br>
 		
-		<input type="submit" value="Save" class="btn btn-success"><br> 
+		<input type="submit" value="Guardar"><br> 
 	</form:form>
 </body>
 </html>

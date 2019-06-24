@@ -31,7 +31,7 @@
 		<label>Cerrado a las: </label>
 		<form:input type="text" name="horarioout" path="horarioout"/><br>
 		
-		<input type="submit" value="Guardar" class="btn btn-success"><br> 
+		<input type="submit" value="Guardar"><br> 
 	</form:form>
 </body>
 </html>

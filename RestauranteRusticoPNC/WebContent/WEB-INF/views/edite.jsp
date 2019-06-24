@@ -21,14 +21,14 @@
 		<form:input type="text" name="genero" path="genero"/><br>
 		
 		<label>Estado: </label><br>
-		<div class="radio">
+		<div>
 		<form:radiobutton name="status" path="estado" value="true"/><label>Active</label><br>
 		</div>
-		<div class="radio">
+		<div>
 		<form:radiobutton name="status" path="estado" value="false"/><label>Inactive</label><br>
 		</div>
 		
-		<input type="submit" value="Guardar" class="btn btn-success"><br> 
+		<input type="submit" value="Guardar"><br> 
 	</form:form>
 </body>
 </html>

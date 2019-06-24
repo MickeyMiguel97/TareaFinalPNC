@@ -44,6 +44,14 @@ public class Empleado {
 		}
 	}
 
+	public Boolean getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
+	}
+
 	public Integer getPk_codempleado() {
 		return pk_codempleado;
 	}
@@ -74,14 +82,6 @@ public class Empleado {
 
 	public void setGenero(String genero) {
 		this.genero = genero;
-	}
-
-	public int getEstado() {
-		return estado;
-	}
-
-	public void setEstado(int estado) {
-		this.estado = estado;
 	}
 
 	public Sucursal getSucursal() {
