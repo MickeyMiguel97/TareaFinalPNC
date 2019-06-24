@@ -14,7 +14,7 @@ public class UserServiceImp {
 	public UserRepository usuariorepository;
 	
 	@Override
-	public List<User> findByUsAndClave(String username, String password) {
+	public List<User> findByUsuarioAndClave(String username, String password) {
 		// TODO Auto-generated method stub
 		return usuariorepository.findByUsuarioAndClave(username, password);
 	}

@@ -111,6 +111,4 @@ public class Sucursal {
 		this.empleados = empleados;
 	}
 	
-	
-	
 }

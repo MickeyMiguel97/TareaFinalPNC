@@ -15,6 +15,11 @@ import javax.persistence.Table;
 @Table(schema="public", name="empleado")
 public class Empleado {
 	
+	public Empleado() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue(generator = "empleado_pk_codempleado_seq", strategy = GenerationType.AUTO)
 	@SequenceGenerator(name = "empleado_pk_codempleado_seq", sequenceName = "public.empleado_pk_codempleado_seq", allocationSize = 1)
@@ -42,6 +47,17 @@ public class Empleado {
 		else {
 			return estado == true ? "Activo":"Inactivo";
 		}
+	}
+
+	public Empleado(Integer pk_codempleado, String nombre, Integer edad, String genero, Boolean estado,
+			Sucursal sucursal) {
+		super();
+		this.pk_codempleado = pk_codempleado;
+		this.nombre = nombre;
+		this.edad = edad;
+		this.genero = genero;
+		this.estado = estado;
+		this.sucursal = sucursal;
 	}
 
 	public Boolean getEstado() {

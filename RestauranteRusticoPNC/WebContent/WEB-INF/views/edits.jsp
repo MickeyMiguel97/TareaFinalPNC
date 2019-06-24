@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form  action="${pageContext.request.contextPath}/edits" method="POST" modelAttribute="sucursal">
+<form:form  action="${pageContext.request.contextPath}/edit" method="POST" modelAttribute="sucursal">
 
 		<form:input type="hidden" name="pk_codsucursal" path="pk_codsucursal"/>
 		
