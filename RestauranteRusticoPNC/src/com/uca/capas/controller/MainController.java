@@ -43,12 +43,12 @@ public class MainController {
 			List<User> results = null;
 			
 			try {
-				results = usuarioService.findByUsuarioAndClave(user.getUsuario(), user.getClave());
+				results = usuarioService.findByNombreAndClave(user.getNombre(), user.getClave());
 			}catch (Exception e){
 				
 			}
 			
-			if(results.size()==1) {
+			if(results.size() == 1) {
 				List<Sucursal> sucursales = null;
 				try {
 					sucursales = sucursalService.findAll();

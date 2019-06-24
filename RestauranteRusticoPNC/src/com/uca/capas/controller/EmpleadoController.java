@@ -57,7 +57,7 @@ public class EmpleadoController {
 			}catch(Exception e) {}
 			mav.addObject("sucursal", sucursal);
 			mav.addObject("empleados", empleados);
-			mav.setViewName("empleados");
+			mav.setViewName("profile");
 		}
 		return mav;
 	}
@@ -97,7 +97,7 @@ public class EmpleadoController {
 			}catch(Exception e) {}
 			mav.addObject("sucursal", sucursal);
 			mav.addObject("empleados", empleados);
-			mav.setViewName("empleados");
+			mav.setViewName("profile");
 		}
 		return mav;
 	}
@@ -116,7 +116,7 @@ public class EmpleadoController {
 		}catch(Exception e) {}
 		mav.addObject("sucursal", sucursal);
 		mav.addObject("empleados", empleados);
-		mav.setViewName("empleados");
+		mav.setViewName("profile");
 		return mav;
 	}
 	

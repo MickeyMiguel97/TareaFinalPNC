@@ -12,7 +12,7 @@ charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 	<font color="#808000">BIENVENIDO</font><br>
 	<form:form action="${pageContext.request.contextPath}/login" modelAttribute="usuario" method="post" >
 		User name: <br>
-		<form:input type="text" name="usuario" path="usuario"/><br>
+		<form:input type="text" name="nombre" path="nombre"/><br>
 		Password: <br>
 		<form:input type="password" name="clave" path="clave"/><br>
 		<input type="submit" value="Login">

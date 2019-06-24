@@ -16,7 +16,7 @@ public class User {
 	@GeneratedValue(generator = "usuario_pk_usuario_seq", strategy = GenerationType.AUTO)
 	@SequenceGenerator(name = "usuario_pk_usuario_seq", sequenceName = "public.usuario_pk_usuario_seq", allocationSize = 1)
 	@Column(name = "pk_usuario")
-	private String usuario;
+	private int pkusuario;
 	
 	@Column(name = "nombre")
 	private String nombre;
@@ -24,12 +24,12 @@ public class User {
 	@Column(name = "clave")
 	private String clave;
 
-	public String getUsuario() {
-		return usuario;
+	public int getPkUsuario() {
+		return pkusuario;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setPkUsuario(int usuario) {
+		this.pkusuario = usuario;
 	}
 
 	public String getNombre() {

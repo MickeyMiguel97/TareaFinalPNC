@@ -5,5 +5,5 @@ import java.util.List;
 import com.uca.capas.domain.User;
 
 public interface UserService {
-	public List<User> findByUsuarioAndClave(String username, String password);
+	public List<User> findByNombreAndClave(String username, String password);
 }

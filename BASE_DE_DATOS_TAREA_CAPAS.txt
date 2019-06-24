@@ -1,0 +1,65 @@
+DROP TABLE USUARIO;
+
+CREATE TABLE USUARIO(
+	PK_USUARIO serial NOT NULL,
+	NOMBRE varchar(150),
+	CLAVE varchar(150),
+	
+	CONSTRAINT pk_usuario PRIMARY KEY(
+		PK_USUARIO
+	)
+);
+
+DROP TABLE SUCURSAL;
+
+CREATE TABLE SUCURSAL(
+	PK_CODSUCURSAL serial NOT NULL,
+	NOMBRE varchar(150),
+	GERENTE varchar(150),
+	NMESAS int,
+	UBICACION varchar(150),
+	HORARIOIN varchar(10),
+	HORARIOOUT varchar(10),
+	
+	CONSTRAINT pk_codsucursal PRIMARY KEY(
+		PK_CODSUCURSAL
+	)
+);
+
+DROP TABLE EMPLEADO;
+
+CREATE TABLE EMPLEADO(
+	PK_CODEMPLEADO int NOT NULL,
+	NOMBRE varchar(150),
+	EDAD int,
+	GENERO varchar(30),
+	ESTADO boolean,
+	FK_SUCURSAL int,
+	
+	CONSTRAINT pk_codempleado PRIMARY KEY(
+		PK_CODEMPLEADO
+	)
+);
+
+ALTER TABLE EMPLEADO
+ADD CONSTRAINT fk_empleado_sucursal FOREIGN KEY (FK_SUCURSAL) 
+REFERENCES SUCURSAL (PK_CODSUCURSAL);
+
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (0, 'Miguel','kE6YY5Dl');
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (1, 'Jorge','dOwRrnlU');
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (2, 'Salvador','vOrvOlkM');
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (3, 'Sara','IlnVFhHf');
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (4, 'Marisol','QEpJnFmw');
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (5, 'Marlene','RVGtoSlr');
+INSERT INTO USUARIO(pk_usuario, nombre, clave) VALUES (6, 'Gerardo','Lf0CXVTH');
+
+INSERT INTO EMPLEADO(pk_codempleado, nombre, edad, genero, estado, fk_sucursal) VALUES (0, 'Juan', 21, 'Masculino', true, 0);
+INSERT INTO EMPLEADO(pk_codempleado, nombre, edad, genero, estado, fk_sucursal) VALUES (1, 'Maria', 25, 'Femenino', false, 1);
+INSERT INTO EMPLEADO(pk_codempleado, nombre, edad, genero, estado, fk_sucursal) VALUES (2, 'Nuria', 23, 'Femenino', true, 2);
+INSERT INTO EMPLEADO(pk_codempleado, nombre, edad, genero, estado, fk_sucursal) VALUES (3, 'Alfonso', 29, 'Masculino', false, 2);
+INSERT INTO EMPLEADO(pk_codempleado, nombre, edad, genero, estado, fk_sucursal) VALUES (4, 'Felix', 24, 'Masculino', true, 0);
+INSERT INTO EMPLEADO(pk_codempleado, nombre, edad, genero, estado, fk_sucursal) VALUES (5, 'Susana', 22, 'Femenino', false, 1);
+
+INSERT INTO SUCURSAL(pk_codsucursal, nombre, gerente, nmesas, ubicacion, horarioin, horarioout) VALUES (0, 'La casita', 'Elias', 16, 'San Salvador', '7:00 am', '5:00 pm');
+INSERT INTO SUCURSAL(pk_codsucursal, nombre, gerente, nmesas, ubicacion, horarioin, horarioout) VALUES (1, 'Le bahre', 'Antonio', 20, 'San Miguel', '9:00 am', '6:00 pm');
+INSERT INTO SUCURSAL(pk_codsucursal, nombre, gerente, nmesas, ubicacion, horarioin, horarioout) VALUES (2, 'La pizza', 'Helen', 7, 'San Vicente', '8:00 am', '5:00 pm');

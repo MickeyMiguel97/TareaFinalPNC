@@ -8,14 +8,16 @@ import org.springframework.stereotype.Service;
 import com.uca.capas.domain.User;
 import com.uca.capas.repository.UserRepository;
 
-public class UserServiceImp {
+@Service
+public class UserServiceImp implements UserService{
 	
 	@Autowired
 	public UserRepository usuariorepository;
 	
 	@Override
-	public List<User> findByUsuarioAndClave(String username, String password) {
+	public List<User> findByNombreAndClave(String username, String password) {
 		// TODO Auto-generated method stub
-		return usuariorepository.findByUsuarioAndClave(username, password);
+		return usuariorepository.findByNombreAndClave(username, password);
 	}
 }
+
