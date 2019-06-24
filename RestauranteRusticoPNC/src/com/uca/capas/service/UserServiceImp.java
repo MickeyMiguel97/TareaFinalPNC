@@ -12,12 +12,13 @@ import com.uca.capas.repository.UserRepository;
 public class UserServiceImp implements UserService{
 	
 	@Autowired
-	public UserRepository usuariorepository;
+	public UserRepository Userrepo;
 	
 	@Override
 	public List<User> findByNombreAndClave(String username, String password) {
 		// TODO Auto-generated method stub
-		return usuariorepository.findByNombreAndClave(username, password);
+		return Userrepo.findByNombreAndClave(username, password);
 	}
 }
+
 

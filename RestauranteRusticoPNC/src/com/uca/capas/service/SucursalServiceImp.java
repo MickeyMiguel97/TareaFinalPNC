@@ -14,28 +14,28 @@ import com.uca.capas.repository.SucursalRepository;
 public class SucursalServiceImp implements SucursalService {
 		
 	@Autowired
-	public SucursalRepository sucursalrepository;
+	public SucursalRepository Sucrepo;
 
 	@Override
 	public List<Sucursal> findAll() {
-		return sucursalrepository.findAll();
+		return Sucrepo.findAll();
 	}
 
 	@Transactional
 	@Override
 	public void delete(int id) {
-		sucursalrepository.deleteById(id);
+		Sucrepo.deleteById(id);
 	}
 
 	@Override
 	public Sucursal findOne(Integer id) {
-		return sucursalrepository.getOne(id);
+		return Sucrepo.getOne(id);
 	}
 
 	@Transactional
 	@Override
 	public void insert(Sucursal s) {
-		sucursalrepository.save(s);
+		Sucrepo.save(s);
 	}
 
 }

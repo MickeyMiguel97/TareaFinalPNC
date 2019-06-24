@@ -13,27 +13,27 @@ import com.uca.capas.repository.EmpleadoRepository;
 public class EmpleadoServiceImp implements EmpleadoService {
 
 	@Autowired
-	public EmpleadoRepository employeerepository;
+	public EmpleadoRepository Emprepo;
 	
 	@Override
 	public List<Empleado> findAll() {
-		return employeerepository.findAll();
+		return Emprepo.findAll();
 	}
 
 	@Override
 	public Empleado findOne(Integer id) {
-		return employeerepository.getOne(id);
+		return Emprepo.getOne(id);
 	}
 
 	@Override
 	public void delete(int id) {
-		employeerepository.deleteById(id);
+		Emprepo.deleteById(id);
 		
 	}
 
 	@Override
 	public void insert(Empleado s) {
-		employeerepository.save(s);
+		Emprepo.save(s);
 	}
 
 }

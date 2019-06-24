@@ -9,8 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form  action="${pageContext.request.contextPath}/agregars" method="POST" modelAttribute="sucursal">
-		
+<form:form  action="${pageContext.request.contextPath}/new" method="POST" modelAttribute="sucursal">		
 		<label>Nombre: </label>
 		<form:input type="text" name="nombre" path="nombre"/><br>
 		
