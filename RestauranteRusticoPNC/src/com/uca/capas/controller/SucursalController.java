@@ -115,7 +115,7 @@ public class SucursalController {
 		List<Empleado> empleados = sucursal.getEmpleados();
 		mav.addObject("sucursal",sucursal);
 		mav.addObject("empleados",empleados);
-		mav.setViewName("empleados");
+		mav.setViewName("profile");
 		return mav;
 	}
 	

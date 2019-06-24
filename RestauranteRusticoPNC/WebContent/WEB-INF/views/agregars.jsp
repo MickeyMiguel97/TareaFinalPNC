@@ -10,8 +10,6 @@
 </head>
 <body>
 <form:form  action="${pageContext.request.contextPath}/agregars" method="POST" modelAttribute="sucursal">
-
-		<form:input type="hidden" name="pk_codsucursal" path="pk_codsucursal"/>
 		
 		<label>Nombre: </label>
 		<form:input type="text" name="nombre" path="nombre"/><br>
